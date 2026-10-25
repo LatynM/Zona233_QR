@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zona 233: Experiencia</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Zona 233: Experiencia Territorial</title>
+  <link rel="stylesheet" href="style.css?v=3">
   <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
 </head>
 <body>
@@ -20,17 +20,15 @@
     <div id="reader"></div>
     <button id="start-btn" class="btn" onclick="startCamera()">Activar escáner</button>
 
-    
     <!-- Manual input for testing on your PC or during class presentations 
     <div class="fallback-box">
       <input type="text" id="manual-code" placeholder="Enter node ID (e.g. loc-01)">
       <button onclick="handleScanResult(document.getElementById('manual-code').value)">Load</button>
     </div>
     -->
-    
   </section>
 
-  <!-- VIEW 2: HISTORICAL PLACE ARCHIVE -->
+  <!-- VIEW 2: HISTORICAL PLACE ARCHIVE (LIVE CAMERA SLIDER) -->
   <section id="archive-view" class="view">
     <h2 id="place-title">Location Name</h2>
     <p id="place-summary" class="summary-text"></p>
@@ -38,8 +36,38 @@
     <div id="era-tabs" class="era-tabs"></div>
 
     <div class="archive-card">
-      <img id="era-image" src="" alt="Historical view">
+      <!-- CONTENEDOR DEL SLIDER ANTES / AHORA CON CÁMARA EN VIVO -->
+      <div class="comparison-viewer" id="comparison-viewer">
+        <!-- Capa inferior: Cámara trasera en vivo -->
+        <video id="live-camera" autoplay playsinline muted></video>
+
+        <!-- Capa superior: Foto histórica recortada por el slider -->
+        <img id="era-image" src="" alt="Vista histórica">
+
+        <!-- Etiquetas de las esquinas -->
+        <span class="layer-badge badge-past" id="past-label">1930</span>
+        <span class="layer-badge badge-live">EN VIVO</span>
+
+        <!-- Línea divisoria y botón central -->
+        <div id="slider-divider" class="slider-divider">
+          <div class="slider-handle">&#8596;</div>
+        </div>
+
+        <!-- Control táctil sobre la imagen -->
+        <input
+          type="range"
+          id="wipe-slider"
+          class="wipe-slider"
+          min="0"
+          max="100"
+          value="50"
+          aria-label="Deslizar para comparar el pasado con la cámara en vivo"
+          oninput="updateWipe(this.value)"
+        >
+      </div>
+
       <div class="archive-body">
+        <p class="align-hint">Desliza hacia los lados para superponer el archivo histórico sobre tu cámara.</p>
         <p id="era-caption" class="archive-caption"></p>
         <p id="era-description"></p>
       </div>
@@ -48,6 +76,6 @@
     <button class="btn" onclick="returnToScanner()">Escanear otra ubicación</button>
   </section>
 
-  <script src="app.js"></script>
+  <script src="app.js?v=3"></script>
 </body>
 </html>
