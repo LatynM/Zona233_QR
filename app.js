@@ -6,13 +6,13 @@ const PLACES_DATA = {
     timeline: [
       {
         era: "1930",
-        image: "loc_01_a.jpg",
+        image: "/loc_01_a.jpg",
         caption: "Foto",
         description: "Informacion"
       },
       {
         era: "1980",
-        image: "loc_01_b.jpg",
+        image: "/loc_01_b.jpg",
         caption: "Foto",
         description: "Informacion"
       }
@@ -97,10 +97,6 @@ function renderPlace(code) {
   document.getElementById("place-title").textContent = place.name;
   document.getElementById("place-summary").textContent = place.summary;
 
-  // Reinicia el slider al centro (50%) cada vez que se abre un lugar
-  document.getElementById("wipe-slider").value = 50;
-  updateWipe(50);
-
   const tabsContainer = document.getElementById("era-tabs");
   tabsContainer.innerHTML = "";
 
@@ -112,13 +108,26 @@ function renderPlace(code) {
     tabsContainer.appendChild(btn);
   });
 
+  // Carga la foto PRIMERO antes de tocar el slider
   selectEra(place, 0);
+
+  const slider = document.getElementById("wipe-slider");
+  if (slider) {
+    slider.value = 50;
+    updateWipe(50);
+  }
 }
 
 function selectEra(place, index) {
   const eraData = place.timeline[index];
-  document.getElementById("era-image").src = eraData.image;
-  document.getElementById("past-label").textContent = eraData.era;
+  const imgEl = document.getElementById("era-image");
+
+  imgEl.onerror = () => alert("No se pudo cargar la imagen en la ruta: " + eraData.image);
+  imgEl.src = eraData.image;
+
+  const pastLabel = document.getElementById("past-label");
+  if (pastLabel) pastLabel.textContent = eraData.era;
+
   document.getElementById("era-caption").textContent = eraData.caption;
   document.getElementById("era-description").textContent = eraData.description;
 
