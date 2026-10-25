@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zona 233: Experiencia</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+</head>
+<body>
+
+  <!-- VIEW 1: LANDING & QR SCANNER -->
+  <section id="scanner-view" class="view active">
+    <header>
+      <h1>ZONA 233</h1>
+      <h2>EXPERIENCIA TERRITORIAL</h2>
+      <p>Escanea uno de los QR para comenzar.</p>
+    </header>
+
+    <div id="reader"></div>
+    <button id="start-btn" class="btn" onclick="startCamera()">Activar escáner</button>
+
+    
+    <!-- Manual input for testing on your PC or during class presentations 
+    <div class="fallback-box">
+      <input type="text" id="manual-code" placeholder="Enter node ID (e.g. loc-01)">
+      <button onclick="handleScanResult(document.getElementById('manual-code').value)">Load</button>
+    </div>
+    -->
+    
+  </section>
+
+  <!-- VIEW 2: HISTORICAL PLACE ARCHIVE -->
+  <section id="archive-view" class="view">
+    <h2 id="place-title">Location Name</h2>
+    <p id="place-summary" class="summary-text"></p>
+
+    <div id="era-tabs" class="era-tabs"></div>
+
+    <div class="archive-card">
+      <img id="era-image" src="" alt="Historical view">
+      <div class="archive-body">
+        <p id="era-caption" class="archive-caption"></p>
+        <p id="era-description"></p>
+      </div>
+    </div>
+
+    <button class="btn" onclick="returnToScanner()">Escanear otra ubicación</button>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
