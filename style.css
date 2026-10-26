@@ -19,7 +19,7 @@ body {
 .view.active { display: block; }
 
 header { margin-bottom: 1.5rem; text-align: center; }
-header h1 { font-family: 'Special Elite'; font-size: 1.6rem; letter-spacing: 2px; margin-bottom: 0.25rem; }
+header h1 { font-family: "Special Elite"; font-size: 1.6rem; letter-spacing: 2px; margin-bottom: 0.25rem; }
 header h2 { font-size: 1rem; letter-spacing: 1.5px; color: var(--accent); margin-bottom: 0.5rem; font-weight: 600; }
 header p, .summary-text { font-size: 0.9rem; color: #aaa; margin-top: 0.25rem; }
 
