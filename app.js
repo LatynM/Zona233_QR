@@ -6,7 +6,7 @@ const PLACES_DATA = {
     timeline: [
       {
         era: "1930",
-        image: "/loc_01.jpg",
+        image: "/loc_01.png",
         caption: "Foto",
         description: "Informacion"
       }
@@ -18,7 +18,7 @@ const PLACES_DATA = {
     timeline: [
       {
         era: "1930",
-        image: "/loc_02_a.jpg",
+        image: "/loc_02.png",
         caption: "Foto",
         description: "Informacion"
       }
@@ -30,7 +30,7 @@ const PLACES_DATA = {
     timeline: [
       {
         era: "1930",
-        image: "/loc_02_a.jpg",
+        image: "/loc_03.png",
         caption: "Foto",
         description: "Informacion"
       }
