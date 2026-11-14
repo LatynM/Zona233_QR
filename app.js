@@ -5,9 +5,9 @@ const PLACES_DATA = {
     summary: "Descripción",
     timeline: [
       {
-        era: "1930",
+        era: "2026",
         image: "/loc_01.png",
-        caption: "Foto",
+        caption: "Brigada de investigaciones (Marcelo T. de Alvear)",
         description: "Informacion"
       }
     ]
@@ -17,9 +17,9 @@ const PLACES_DATA = {
     summary: "Descripción",
     timeline: [
       {
-        era: "1930",
+        era: "2026",
         image: "/loc_02.png",
-        caption: "Foto",
+        caption: "Brigada de investigaciones (Juan B. Justo)",
         description: "Informacion"
       }
     ]
@@ -29,9 +29,9 @@ const PLACES_DATA = {
     summary: "Descripción",
     timeline: [
       {
-        era: "1930",
+        era: "2026",
         image: "/loc_03.png",
-        caption: "Foto",
+        caption: "Alcaidia de Resistencia",
         description: "Informacion"
       }
     ]
@@ -41,9 +41,9 @@ const PLACES_DATA = {
     summary: "Descripción",
     timeline: [
       {
-        era: "1930",
+        era: "2026",
         image: "/loc_04.png",
-        caption: "Foto",
+        caption: "Carcel Federal U7",
         description: "Informacion"
       }
     ]

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
 :root {
   --bg: #0b0a09;
   --surface: #1e1e1e;
@@ -6,20 +8,30 @@
   --split: 50%; /* Posición inicial del divisor */
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: 'Special Elite', 'Courier New', monospace;
   background-color: var(--bg);
   color: var(--text);
   min-height: 100vh;
+}
+
+/* Fuerza a los botones y cuadros de texto a heredar la fuente Special Elite */
+button,
+input {
+  font-family: inherit;
 }
 
 .view { display: none; padding: 1.5rem; max-width: 600px; margin: 0 auto; width: 100%; }
 .view.active { display: block; }
 
 header { margin-bottom: 1.5rem; text-align: center; }
-header h1 { font-family: "Special Elite"; font-size: 1.6rem; letter-spacing: 2px; margin-bottom: 0.25rem; }
+header h1 { font-size: 1.6rem; letter-spacing: 2px; margin-bottom: 0.25rem; }
 header h2 { font-size: 1rem; letter-spacing: 1.5px; color: var(--accent); margin-bottom: 0.5rem; font-weight: 600; }
 header p, .summary-text { font-size: 0.9rem; color: #aaa; margin-top: 0.25rem; }
 
@@ -30,8 +42,6 @@ header p, .summary-text { font-size: 0.9rem; color: #aaa; margin-top: 0.25rem; }
   background: #000;
   border: 1px solid #333;
 }
-
-
 
 .btn {
   display: block;
@@ -109,9 +119,15 @@ header p, .summary-text { font-size: 0.9rem; color: #aaa; margin-top: 0.25rem; }
   display: block;
 }
 
+#live-camera {
+  z-index: 1;
+}
+
 /* Recorta el lado derecho de la imagen histórica según la barra */
 #era-image {
-  clip-path: inset(0 calc(100% - var(--split)) 0 0);
+  z-index: 2;
+  -webkit-clip-path: inset(0 calc(100% - var(--split, 50%)) 0 0);
+  clip-path: inset(0 calc(100% - var(--split, 50%)) 0 0);
 }
 
 .slider-divider {
