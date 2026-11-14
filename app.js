@@ -8,7 +8,7 @@ const PLACES_DATA = {
         era: "2026",
         image: "/loc_01.png",
         caption: "Centro clandestino",
-        description: "Funcionó como el centro clandestino de detención más grande del noreste argentino durante la última dictadura cívico-militar. Ahora comprende el Espacio de Memoria de la ciudad de Resistencia"
+        description: "Ubicado en Marcelo T. de Alvear 32. Funcionó como el centro clandestino de detención más grande del noreste argentino durante la última dictadura cívico-militar. Ahora comprende el Espacio de Memoria de la ciudad de Resistencia"
       }
     ]
   },
@@ -20,7 +20,7 @@ const PLACES_DATA = {
         era: "2026",
         image: "/loc_02.png",
         caption: "Centro clandestino",
-        description: "Informacion"
+        description: "Ubicado en Juan B. Justo 473."
       }
     ]
   },
@@ -31,20 +31,20 @@ const PLACES_DATA = {
       {
         era: "2026",
         image: "/loc_03.png",
-        caption: "Alcaidia de Resistencia",
-        description: "Informacion"
+        caption: "Centro clandestino",
+        description: "Ubicado en Ushuaia s/n, Villa Barberán."
       }
     ]
   },
   "loc-04": {
-    name: "Carcel Federal U7",
+    name: "Unidad Penal Federal N°7",
     summary: "Descripción",
     timeline: [
       {
         era: "2026",
         image: "/loc_04.png",
-        caption: "Carcel Federal U7",
-        description: "Informacion"
+        caption: "Centro clandestino",
+        description: "Ubicado en Av. Las Heras 1565."
       }
     ]
   }
