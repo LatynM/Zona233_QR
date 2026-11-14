@@ -7,8 +7,8 @@ const PLACES_DATA = {
       {
         era: "2026",
         image: "/loc_01.png",
-        caption: "Brigada de investigaciones (Marcelo T. de Alvear)",
-        description: "Informacion"
+        caption: "Centro clandestino",
+        description: "Funcionó como el centro clandestino de detención más grande del noreste argentino durante la última dictadura cívico-militar. Ahora comprende el Espacio de Memoria de la ciudad de Resistencia"
       }
     ]
   },
@@ -19,7 +19,7 @@ const PLACES_DATA = {
       {
         era: "2026",
         image: "/loc_02.png",
-        caption: "Brigada de investigaciones (Juan B. Justo)",
+        caption: "Centro clandestino",
         description: "Informacion"
       }
     ]
