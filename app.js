@@ -1,18 +1,48 @@
 // Replace these sample entries with your actual locations and local image paths (e.g., "images/foto1.jpg")
 const PLACES_DATA = {
   "loc-01": {
-    name: "Lugar",
+    name: "Brigada de investigaciones (Marcelo T. de Alvear)",
     summary: "Descripción",
     timeline: [
       {
         era: "1930",
-        image: "/loc_01_a.jpg",
+        image: "/loc_01.jpg",
         caption: "Foto",
         description: "Informacion"
-      },
+      }
+    ]
+  },
+  "loc-02": {
+    name: "Brigada de investigaciones (Juan B. Justo)",
+    summary: "Descripción",
+    timeline: [
       {
-        era: "1980",
-        image: "/loc_01_b.jpg",
+        era: "1930",
+        image: "/loc_02_a.jpg",
+        caption: "Foto",
+        description: "Informacion"
+      }
+    ]
+  },
+  "loc-03": {
+    name: "Alcaidia de Resistencia",
+    summary: "Descripción",
+    timeline: [
+      {
+        era: "1930",
+        image: "/loc_02_a.jpg",
+        caption: "Foto",
+        description: "Informacion"
+      }
+    ]
+  },
+  "loc-04": {
+    name: "Carcel Federal U7",
+    summary: "Descripción",
+    timeline: [
+      {
+        era: "1930",
+        image: "/loc_04.png",
         caption: "Foto",
         description: "Informacion"
       }
